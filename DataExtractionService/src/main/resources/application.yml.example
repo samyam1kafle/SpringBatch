@@ -1,0 +1,28 @@
+custom:
+  userDataFileName: customerDataSample.csv # customers-500000.csv for 500000 data file
+
+spring:
+  application:
+    name: DataExtractionService
+  datasource:
+    url: jdbc:mysql://localhost:3306/<DbName>
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: 'update'
+    show-sql: true
+    properties:
+#      hibernate:
+      format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+server:
+  port: 8090
+
