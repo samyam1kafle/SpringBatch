@@ -5,9 +5,9 @@ spring:
   application:
     name: DataExtractionService
   datasource:
-    url: jdbc:mysql://localhost:3306/etl_demo
-    username: bhairab
-    password: kaalbhairab123
+    url: jdbc:mysql://localhost:3306/<DbName>
+    username: root
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
